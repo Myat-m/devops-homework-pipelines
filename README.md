@@ -2,6 +2,28 @@
 
 # How did you test your pipelines?
 
+I simulated them locally in two ways to mirror what Pipeline B and Pipeline C would do.
+
+** Step‑by‑step manual run**
+1. In **Repo A**, created a minimal `Doxyfile` with:
+   - `INPUT = .`
+   - `FILE_PATTERNS = *.c *.cc *.cpp *.cxx *.h *.hpp *.hxx`
+   - `RECURSIVE = YES`
+   - `OUTPUT_DIRECTORY = html` 
+   - `HTML_OUTPUT = .`
+   - `GENERATE_LATEX = NO`
+   - `WARNINGS = YES`
+   - `WARN_IF_UNDOCUMENTED = YES`
+   - `WARN_LOGFILE = warnings.log`
+2. Ran:
+   ```bash
+   doxygen Doxyfile
+
+** Full Flow**
+In RepoA
+doxygen Doxyfile && cd ../RepoC && python parse_doxygen_warnings.py --input ../RepoA/warnings.log --output out/warnings.csv
+
+
 # How did you test repoC python?
 ### With a small sample file
 - Steps:
