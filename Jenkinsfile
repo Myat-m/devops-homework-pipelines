@@ -3,7 +3,7 @@ pipeline {
   options { timestamps(); ansiColor('xterm') }
   environment {
     OUT_TAR = 'doc.tar.gz'
-    REPO_A_URL = 'https://github.com/YOUR_USERNAME/YOUR_REPO_A.git'
+    REPO_A_URL = 'https://github.com/Myat-m/RepoA.git'
     REPO_A_BRANCH = 'main'
   }
   stages {
