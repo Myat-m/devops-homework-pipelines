@@ -20,7 +20,7 @@ I simulated them locally in two ways to mirror what Pipeline B and Pipeline 
    doxygen Doxyfile
 
 ** Full Flow**
-In RepoA
+In RepoA, Ran
 doxygen Doxyfile && cd ../RepoC && python parse_doxygen_warnings.py --input ../RepoA/warnings.log --output out/warnings.csv
 
 
